@@ -4,7 +4,7 @@ import sys
 import random
 
 from objeto.pong import Pong
-from objeto import cor
+from objeto import cor as Cor
 from objeto.bola import Bola
 from objeto.jogador import Jogador
 from objeto.botao import Botao
@@ -140,7 +140,8 @@ if __name__ == '__main__':
                     pygame.display.update()
                     time.sleep(0.1)
                     pong.reiniciar_partida(bola, robo, jogadores)
-                    jogadores = gera_nova_populacao()
+                    populacao = gerar_populacao(n_individuos, rede_treinada=False)
+                    jogadores = gera_nova_populacao(populacao)
                     geracao = 1
                     botao_reset.cor = Cor.AZUL
                 if botao_start.text == 'Stop':
