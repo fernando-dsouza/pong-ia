@@ -1,4 +1,3 @@
-import random
 import numpy as np
 
 
@@ -46,5 +45,3 @@ class Matriz:
         matriz = Matriz(matriz_a.linhas, matriz_b.colunas)
         matriz.data = np.dot(matriz_a.data, matriz_b.data).tolist()
         return matriz
-
-

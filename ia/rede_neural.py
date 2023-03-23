@@ -1,6 +1,6 @@
-from ia.matriz import Matriz
-
 import numpy as np
+
+from ia.matriz import Matriz
 
 
 class RedeNeural:
